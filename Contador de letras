@@ -1,0 +1,23 @@
+def contar_vogais_consoantes(frase):
+    vogais = "aeiou"
+    consoantes = "bcdfghjklmnpqrstvwxyz"
+
+    frase = frase.lower()
+    num_vogais = 0
+    num_consoantes = 0
+
+    for letra in frase:
+        if letra in vogais:
+            num_vogais += 1
+        elif letra in consoantes:
+            num_consoantes += 1
+
+    return num_vogais, num_consoantes
+
+# Programa principal
+frase_usuario = input("Digite uma frase: ")
+vogais, consoantes = contar_vogais_consoantes(frase_usuario)
+
+print("\n Resultado:")
+print(f" Número de vogais: {vogais}")
+print(f" Número de consoantes: {consoantes}")
